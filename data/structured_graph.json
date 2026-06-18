@@ -1,0 +1,18 @@
+{
+  "nodes": [
+    {"id": "Carl Zeiss", "type": "Supplier", "country": "Germany", "market_cap_billions": 15.2},
+    {"id": "ASML", "type": "Equipment Manufacturer", "country": "Netherlands", "market_cap_billions": 380.5},
+    {"id": "TSMC", "type": "Fabricator", "country": "Taiwan", "market_cap_billions": 720.0},
+    {"id": "NVIDIA", "type": "Fabless Designer", "country": "USA", "market_cap_billions": 2100.0},
+    {"id": "Apple", "type": "Consumer Electronics", "country": "USA", "market_cap_billions": 2900.0},
+    {"id": "AMD", "type": "Fabless Designer", "country": "USA", "market_cap_billions": 280.0}
+  ],
+  "edges": [
+    {"source": "Carl Zeiss", "target": "ASML", "relation": "supplies_optics", "dependency_score": 0.96},
+    {"source": "ASML", "target": "TSMC", "relation": "supplies_euv_machines", "dependency_score": 0.88},
+    {"source": "TSMC", "target": "NVIDIA", "relation": "manufactures_chips", "dependency_score": 0.95},
+    {"source": "TSMC", "target": "AMD", "relation": "manufactures_chips", "dependency_score": 0.92},
+    {"source": "NVIDIA", "target": "Apple", "relation": "supplies_ai_silicon", "dependency_score": 0.75},
+    {"source": "AMD", "target": "Apple", "relation": "supplies_gpu_hardware", "dependency_score": 0.40}
+  ]
+}
